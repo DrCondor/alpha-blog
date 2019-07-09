@@ -1,4 +1,9 @@
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_AeuWJ4p1Jg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<% @articles.each do |article|%>
-<%=article.title%>
-<%end%>
+<h1>Showing selected article</h1>
+
+<p>
+  Title: <%= @article.title %>
+</p>
+
+<p>
+  Description: <%= @article.description %>
+</p>
