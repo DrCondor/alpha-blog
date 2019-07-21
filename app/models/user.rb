@@ -2,11 +2,12 @@
 #
 # Table name: users
 #
-#  id         :integer          not null, primary key
-#  username   :string
-#  email      :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id              :integer          not null, primary key
+#  username        :string
+#  email           :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  password_digest :string
 #
 
 class User < ApplicationRecord
@@ -20,5 +21,5 @@ class User < ApplicationRecord
                     length: { maximum: 105 },
                     uniqueness: { case_sensitive: false },
                     format: { with: VALID_EMAIL_REGEX }
-
+  has_secure_password
 end
