@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   get 'secret', to: 'pages#secret'
 
   resources :articles
+
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
 end
